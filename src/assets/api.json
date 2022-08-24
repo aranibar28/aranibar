@@ -1,0 +1,148 @@
+[
+  {
+    "_id": "1",
+    "title": "Ecommerce",
+    "description": "Este es un proyecto de Ecommerce analizado y desarrollado como si fuera para un cliente real, aplicando diversos conocimientos, desde el análisis del negocio hasta la fase final en producción.",
+    "stack": "Angular, NodeJS, Express, MongoDB",
+    "date": "2022-02-01",
+    "filter": "angular",
+    "image": "1_x4cajv",
+    "gallery": [
+      "1_x4cajv",
+      "2_yr65c3",
+      "3_qeh1ub",
+      "4_fixeln",
+      "5_q4rffq",
+      "6_yy276o"
+    ]
+  },
+  {
+    "_id": "2",
+    "title": "Panel Administrativo",
+    "description": "Panel Administrativo del Ecommerce para gestionar los pedidos de los clientes, recursos de la página principal (categoría, productos, inventario, variantes, reseñas) y las promociones por tiempo limitado.",
+    "stack": "Angular, NodeJS, Express, MongoDB",
+    "date": "2022-03-01",
+    "filter": "angular",
+    "image": "1_n8wdxr",
+    "gallery": [
+      "1_n8wdxr",
+      "2_tmqjc1",
+      "3_dnyyle",
+      "4_d6l8ez",
+      "5_ahh830",
+      "6_wop8ku"
+    ]
+  },
+  {
+    "_id": "3",
+    "title": "Sistema de Matrículas",
+    "description": "Plataforma para la administración de matrículas añadiendo módulos de CRM, Prospeccionde clientes, ERP, Email Marketing, Firmas digitales, etc.",
+    "stack": "Angular, NodeJS, Express, MongoDB",
+    "date": "2022-07-01",
+    "filter": "angular",
+    "image": "1_xwbmya",
+    "gallery": [
+      "1_xwbmya",
+      "2_mayaop",
+      "3_kyicjy",
+      "4_hhfveh",
+      "5_xvnj8a",
+      "6_qgq9rf",
+      "7_qn7utu",
+      "8_iuguns"
+    ]
+  },
+  {
+    "_id": "4",
+    "title": "Sistema de Restaurantes",
+    "description": "Sistemas de pedidos mediante una carta digital, el usuario puede indicar su pedido, sacar las cuentas y solicitar el pago.",
+    "stack": "React, Python, Django, SQLite",
+    "date": "2021-12-15",
+    "filter": "react",
+    "image": "1_tcco2e",
+    "gallery": [
+      "1_tcco2e",
+      "2_ptyrpq",
+      "3_gkf5gz",
+      "4_z0pto9",
+      "5_nebg7n",
+      "6_yj5jse",
+      "7_qyj8lz",
+      "8_tupgxd"
+    ]
+  },
+  {
+    "_id": "5",
+    "title": "Sistema ERP",
+    "description": "Sistema ERP completo para un empresa de manufacturas, incluyen modulos de compra, ventas, proveedores, productos, categorias, inventario, kardex, etc.",
+    "stack": "HTML5, CSS3, JavaScript, PHP, MySQL",
+    "date": "2020-06-12",
+    "filter": "php",
+    "image": "1_m5gq4b",
+    "gallery": [
+      "1_m5gq4b",
+      "2_rxw6il",
+      "3_qmyjjr",
+      "4_jpl0ft",
+      "5_kd9uwd",
+      "6_hbiva2",
+      "7_ktuiz8",
+      "8_mtdjdx"
+    ]
+  },
+  {
+    "_id": "6",
+    "title": "Sistema Punto de Ventas",
+    "description": "Sistema Punto de Ventas para mejorar la productividad de los negocios, facturación de forma rápida y control total de los ingresos.",
+    "stack": "HTML5, CSS3, JavaScript, PHP, MySQL",
+    "date": "2018-06-01",
+    "filter": "php",
+    "image": "1_kakjz8",
+    "gallery": [
+      "1_kakjz8",
+      "2_ua4qwc",
+      "3_mjmqce",
+      "4_bzkhys",
+      "5_ggcikf",
+      "6_gsy5wc",
+      "7_h3oswk",
+      "8_jsuk62"
+    ]
+  },
+  {
+    "_id": "7",
+    "title": "Sistema de Abastecimiento",
+    "description": "Sistema Abastecimiento para mejorar la productividad de los negocios, facturación de forma rápida y control total de los ingresos.",
+    "stack": "HTML5, CSS3, JavaScript, PHP, MySQL",
+    "date": "2018-06-01",
+    "filter": "php",
+    "image": "1_yzkwqb",
+    "gallery": [
+      "1_yzkwqb",
+      "2_wqg95p",
+      "3_lowv6w",
+      "4_hsflmm",
+      "5_akhuti",
+      "6_juouhr",
+      "7_utmxxt",
+      "8_ciwp2u"
+    ]
+  },
+  {
+    "_id": "8",
+    "title": "Sistema de Citas Médicas",
+    "description": "Sistema para administrar citas de los pacientes, asignar un médico, categoría y establecer un horario disponible.",
+    "stack": "HTML5, CSS3, JavaScript, PHP, MySQL",
+    "date": "2018-08-01",
+    "filter": "php",
+    "image": "1_obzb2e",
+    "gallery": [
+      "1_obzb2e",
+      "2_not2dw",
+      "3_n2pbon",
+      "4_kdebdh",
+      "5_j4qyeh",
+      "6_ivtuzi"
+    ]
+  }
+]

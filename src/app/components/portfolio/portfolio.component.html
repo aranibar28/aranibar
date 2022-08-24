@@ -1,0 +1,101 @@
+<section id="portfolio" class="section section-small-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2><span class="point">Portfolio</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portfolio-sort">
+                    <ul class="list-inline">
+                        <li class="colored-link" data-mixitup-control data-filter="all">Todos</li>
+                        <li class="colored-link" data-mixitup-control data-filter=".angular">Angular</li>
+                        <li class="colored-link" data-mixitup-control data-filter=".react">React</li>
+                        <li class="colored-link" data-mixitup-control data-filter=".php">PHP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portfolio">
+                    <div *ngIf="loading" class="row">
+                        <div *ngFor="let item of arrays" class="col-md-3 col-sm-6 col-xs-6" >
+                            <a class="portfolio-box is-loading">
+                                <div class="portfolio-img"></div>
+                                <div class="portfolio-name"></div>
+                                <div class="portfolio-date"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div [ngClass]="{ 'd-none': loading }" class="row">
+                        <ng-container *ngFor="let item of portfolio">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix" [class]="item.filter">
+                                <a [attr.data-name]="item._id" [title]="item.title" data-toggle="modal" data-target="#portfolio-modal" class="portfolio-box">
+                                    <div class="portfolio-img">
+                                        <img [src]="item.image | image : item._id" [alt]="item._id">
+                                    </div>
+                                    <div class="portfolio-name">
+                                        <span>{{ item.title }}</span>
+                                    </div>
+                                    <div class="portfolio-date">
+                                        <span>{{ item.date | date }}</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-labelledby="portfolio-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <ng-container *ngFor="let item of portfolio">
+                <div [attr.data-name]="item._id" class="modal-body">
+                    <div class="modal-title">
+                        <h1><span class="point">{{ item.title }}</span></h1>
+                    </div>
+                    <div class="modal-description">
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div class="about-me-info">
+                        <p>
+                            <span class="span-title">Stack</span>
+                            <span>{{ item.stack }}</span>
+                        </p>
+                        <p>
+                            <span class="span-title">Fecha</span>
+                            <span>{{ item.date | date }}</span>
+                        </p>
+                    </div>
+                    <div class="modal-images">
+                        <!-- Swiper.js Features Start -->
+                       <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <ng-container *ngFor="let subitem of item.gallery">
+                                    <div class="swiper-slide">
+                                        <img [src]="subitem | image : item._id" [alt]="item._id" loading="lazy">
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <!-- Swiper.js Features End -->
+                    </div>
+                    <div class="modal-buttons">
+                        <a class="site-btn">Ver demo</a>
+                        <a class="site-btn gray-btn" data-dismiss="modal">Cerrar</a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

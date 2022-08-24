@@ -1,0 +1,108 @@
+<section id="contact" class="section">
+    <div class="container">
+        <div class="row wave-bg">
+            <app-zigzag></app-zigzag>
+            <div class="col-md-4">
+                <div class="section-sidebar">
+                    <h2><span class="point">Contacto</span></h2>
+                    <div class="opacity-box">
+                        <p>¿Necesitas crear algo genial? ¡Me encantaría ayudar a que esto suceda!. Envíame una mensaje y juntos comencemos un proyecto ahora mismo.</p>
+                    </div>
+                </div>
+            </div>
+            <form (ngSubmit)="send_email()" [formGroup]="myForm">
+                <div class="form-wrapper">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input formControlName="subject" class="form-field" type="text" placeholder="Asunto">
+                            <span [ngClass]="{'form-invalid-text':validators('subject')}" class="form-validation"></span>
+                            <span *ngIf="validators('subject')" class="form-invalid-icon"><i class="mdi mdi-close"></i></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input formControlName="email" class="form-field" type="email" placeholder="Correo">
+                            <span [ngClass]="{'form-invalid-text':validators('email')}" class="form-validation"></span>
+                            <span *ngIf="validators('email')" class="form-invalid-icon"><i class="mdi mdi-close"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <textarea formControlName="message" class="form-field js-field-message" placeholder="Mensaje"></textarea>
+                            <span [ngClass]="{'form-invalid-text':validators('message')}" class="form-validation"></span>
+                        </div>
+                        <div class="submit-holder">
+                            <button *ngIf="!load_btn" type="submit" class="site-btn">Enviar Mensaje</button>
+                            <button *ngIf="load_btn" type="button" class="site-btn" style="opacity: 0.6;" disabled>Enviando</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Contact me modal -->
+<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="portfolio-modal">
+    <div class="modal-dialog modal-center" role="document">
+        <div class="modal-content" >
+            <div class="modal-body">
+                <div class="modal-title">
+                    <h1><span class="point">Contáctame</span></h1>
+                </div>
+                <div class="modal-description">
+                    <p>¿Necesitas crear algo genial? ¡Me encantaría ayudar a que esto suceda!. Envíame una mensaje y juntos comencemos un proyecto ahora mismo.</p>
+                </div>
+                <div class="modal-form">
+                    <form (ngSubmit)="send_email()" [formGroup]="myForm">
+                        <div class="row form-wrapper">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="form-group">
+                                    <input formControlName="subject" class="form-field" type="text" placeholder="Asunto">
+                                    <span [ngClass]="{'form-invalid-text':validators('subject')}" class="form-validation"></span>
+                                    <span *ngIf="validators('subject')" class="form-invalid-icon"><i class="mdi mdi-close"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="email" class="form-field" type="email" placeholder="Correo">
+                                    <span [ngClass]="{'form-invalid-text':validators('email')}" class="form-validation"></span>
+                                    <span *ngIf="validators('email')" class="form-invalid-icon"><i class="mdi mdi-close"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="form-group">
+                                    <textarea formControlName="message" class="form-field js-field-message" placeholder="Mensaje"></textarea>
+                                    <span [ngClass]="{'form-invalid-text':validators('message')}" class="form-validation"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="modal-buttons">
+                                    <button *ngIf="!load_btn" type="submit" class="site-btn">Enviar Mensaje</button>
+                                    <button *ngIf="load_btn" type="button" class="site-btn" style="opacity: 0.6;" disabled>Enviando</button>
+                                    <a (click)="closeModal()" class="site-btn gray-btn" data-dismiss="modal">Cerrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact me modal -->
+
+<!-- Thank you modal -->
+<div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="thanks-modal">
+    <div class="modal-dialog modal-center" role="document">
+        <div class="modal-content" >
+            <div class="modal-body">
+                <div class="modal-title text-success">
+                    <h1><span class="point">Tu mensaje ha sido enviado</span></h1>
+                </div>
+                <div class="modal-description">
+                    <p>Gracias por tu interés en mi trabajo. Me pondré en contacto contigo lo más pronto posible.</p>
+                </div>
+                <a class="site-btn gray-btn" data-dismiss="modal">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Thank you modal -->
