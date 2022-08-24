@@ -29,6 +29,73 @@ a {
   color: #3333ff !important;
 }
 
+.btn-whatsapp-pulse {
+  background: #25d366;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  padding: 35px;
+  text-decoration: none;
+  border-radius: 50%;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.btn-whatsapp-pulse,
+.btn-whatsapp-pulse:active,
+.btn-whatsapp-pulse:focus,
+.btn-whatsapp-pulse:hover {
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.btn-whatsapp-pulse-border {
+  animation-play-state: paused;
+}
+
+.btn-whatsapp-pulse-border::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  padding: 25px;
+  border: 5px solid #25d366;
+  opacity: 0.75;
+  animation-name: pulse-border;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    padding: 25px;
+    opacity: 0.75;
+  }
+  75% {
+    padding: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .is-loading {
   .portfolio-img,
   .portfolio-name,
@@ -39,7 +106,7 @@ a {
     animation: 1.5s shine linear infinite;
   }
   .portfolio-img {
-    height: 158.19px;
+    height: 158px;
   }
   .portfolio-name {
     height: 28px;
@@ -51,6 +118,17 @@ a {
 
 @keyframes shine {
   to {
-    background-position-x: -200%;
+    background-position: -200%;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-name,
+  .portfolio-date {
+    text-align: center;
+  }
+
+  .btn-whatsapp-pulse {
+    display: none;
   }
 }
