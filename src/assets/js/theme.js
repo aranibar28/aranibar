@@ -1,8 +1,6 @@
 $(document).ready(function () {
   "use strict";
 
-  new WOW().init();
-
   //mobile-menu
   $(".mobile-btn, .close-mob-menu").on("click", function () {
     $(".mob-menu-wrapper").toggleClass("active");
